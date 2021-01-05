@@ -1,0 +1,99 @@
+body, html {
+  height: 100%;
+}
+
+body{
+  /* The image used */
+  background-image: url("assets/mike.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+   font-family: 'Cardo', serif;
+}
+h3 {
+  margin-top: 100px;
+  margin-left: 75px;
+ font-family: 'Oswald', sans-serif;
+ text-transform: uppercase;
+  color: #15F401;
+}
+.joke{
+background: rgba( 32, 46, 57, 0.30 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 6.0px );
+-webkit-backdrop-filter: blur( 6.0px );
+border-radius: 10px;
+
+}
+.bmi {         /*my additional class name -for card*/
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/*button*/
+.pos{
+	justify-content: center;
+	margin-left: 90px; 
+	padding: 10px;
+}
+button{
+  position: relative;
+  height: 60px;
+  width: 200px;
+  border: none;
+  outline: none;
+  color: white;
+  background: rgba(17, 17, 17,0.8);
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+}
+button:before{
+  position: absolute;
+  content: '';
+  top: -2px;
+  left: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
+  border-radius: 25px;
+  z-index: -1;
+  opacity: 0;
+  filter: blur(5px);
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background-size: 400%;
+  transition: opacity .3s ease-in-out;
+  animation: animate 20s linear infinite;
+}
+button:hover:before{
+  opacity: 1;
+  border-radius: 25px;
+}
+button:hover:active{
+  background: none;
+  border-radius: 25px;
+}
+button:hover:active:before{
+  filter: blur(2px);
+  border-radius: 25px;
+}
+@keyframes animate {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.des{
+	  
+ font-family: 'Oswald', sans-serif;
+  color: #4CDFF2;
+}
